@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.8
+version = '1.0'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'A* Visualization',
+                   'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'commons-collections:commons-collections:3.2'
+    compile 'org.graphstream:gs-core:1.3'    
+    testCompile 'junit:junit:4.+'
+    testCompile 'org.jbehave:jbehave-core:4.0.5'
+    testCompile 'de.codecentric:jbehave-junit-runner:1.2.0'
+    testCompile 'org.mockito:mockito-all:1.10.19'
+    
+}
