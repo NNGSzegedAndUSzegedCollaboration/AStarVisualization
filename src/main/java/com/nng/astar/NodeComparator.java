@@ -12,10 +12,10 @@ public class NodeComparator implements Comparator<NodeAStar> {
     @Override
     public int compare(NodeAStar node1, NodeAStar node2) {
         if(node1.getfSum() < node2.getfSum()){
-            return 1;
+            return -1;
         }
         if(node1.getfSum() > node2.getfSum()){
-            return -1;
+            return 1;
         }
         return 0;
     }
