@@ -35,6 +35,7 @@ public class AStarVisualizationSteps {
   @When("A* is run to find the shortest path from $start to $goal")
   public void whenAStarIsRunToFindTheShortestPath(String start, String goal) throws InterruptedException {
     shortestPath = new VisualizedAStar().shortestPath(graph, start, goal);
+
   }
 
   @Then("it returns the path through $nodes")
